@@ -1,0 +1,44 @@
+h1{
+    font-family: 'Montserrat';
+}
+
+.pop1{
+    font-family: 'Montserrat';
+}
+
+.btn1{
+    font-family: 'montserrat';
+}
+
+ /* pour les images qui defilles */
+.slide{
+    position: absolute;
+    width: 30%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transforme 0.7s ease, opacity 0.7s;
+    opacity: 0;
+}
+.active{
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 2;
+    width: 50%;
+}
+
+.left{
+    transform: translateX(-80%) scale(0.9);
+    opacity: 0.6;
+    z-index: 1;
+    width: 40%;
+
+}
+
+.right{
+    transform: translateX(80%) scale(0.9);
+    opacity: 0.6;
+    z-index: 1;
+    width: 40%;
+
+}
