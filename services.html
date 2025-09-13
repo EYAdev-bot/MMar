@@ -16,17 +16,30 @@
 </head>
 
 <body class="m-0 p-0">
-    <header class="flex justify-between items-center p-4">
-        <img src="img/logommar.png" alt="logo MMar" class="w-[200px] h-[60px]  object-ocver">
+<header class="flex justify-between items-center p-4">
+    <img src="img/logommar.png" alt="logo MMar" class="w-[200px] h-[60px]  object-ocver">
 
-        <ul class="md:flex gap-6 hidden">
-            <li><a href="index.html" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">ACCEUIL</a></li>
-            <li><a href="" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">SERVICES</a></li>
-            <li><a href="" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">GALERIE</a></li>
-            <li><a href="" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">À PROPOS DE NOUS</a></li>
-            <li><a href="" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">PRENDRE UN RENDEZ-VOUS</a></li>
-        </ul>
-    </header>     
+    <ul class="md:flex hidden gap-6">
+        <li><a href="index.html" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">ACCEUIL</a></li>
+        <li><a href="services.html" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">SERVICES</a></li>
+        <li><a href="" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">GALERIE</a></li>
+        <li><a href="" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">À PROPOS DE NOUS</a></li>
+        <li><a href="" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">PRENDRE UN RENDEZ-VOUS</a></li>
+    </ul>
+
+
+    <ul
+        class="flex nav md:hidden hidden flex-col justify-center items-center gap-6 absolute w-full h-full top-[75px] bg-[#494E2F]">
+        <li><a href="index.html" class="text-white font-bold p-1 inline-block  nav-list relative">ACCEUIL</a></li>
+        <li><a href="services.html" class="text-white font-bold p-1 inline-block  nav-list">SERVICES</a></li>
+        <li><a href="" class="text-white font-bold p-1 inline-block  nav-list">GALERIE</a></li>
+        <li><a href="" class="text-white font-bold p-1 inline-block  nav-list">À PROPOS DE NOUS</a></li>
+        <li><a href="" class="text-white font-bold p-1 inline-block  nav-list">PRENDRE UN RENDEZ-VOUS</a></li>
+    </ul>
+
+    <ion-icon class="md:hidden text-[30px] text-black cursor-pointer" onclick="onToggleMenu(this)"
+        name="menu-outline"></ion-icon>
+</header>
     
     <section class="px-6 bg-[#EFEFEC] mt-11 pt-2">
         <h2 class="text-[#5E2062] font-bold text-3xl mb-6">
@@ -282,7 +295,14 @@
         </div>
     </footer>
     
-    
+    <script>
+        const navlisit = document.querySelector('.nav')
+
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu-outline' ? 'close' : 'menu-outline'
+            navlisit.classList.toggle('hidden')
+        }
+    </script>
     
     <script>
         const CurrentPage = window.location.pathname.split("/").pop();
@@ -300,6 +320,9 @@
     <script src="js/index.js">
 
     </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
     
     </html>

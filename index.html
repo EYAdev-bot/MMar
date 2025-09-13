@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bienvenue chez MMAR Institut prenez soin de vous, formez-vous à l'excellence. 
+            Institut de beauté & centre de formation 
+            un seul lieu, deux fois plus de raison d'y croire.">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +29,17 @@
             <li><a href="" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">À PROPOS DE NOUS</a></li>
             <li><a href="" class="text-[#5E2062] font-bold p-1 inline-block  nav-list">PRENDRE UN RENDEZ-VOUS</a></li>
         </ul>
+
+       
+        <ul class="flex nav md:hidden hidden flex-col justify-center items-center gap-6 absolute w-full h-full top-[75px] bg-[#494E2F]">
+            <li><a href="index.html" class="text-white font-bold p-1 inline-block  nav-list relative">ACCEUIL</a></li>
+            <li><a href="services.html" class="text-white font-bold p-1 inline-block  nav-list">SERVICES</a></li>
+            <li><a href="" class="text-white font-bold p-1 inline-block  nav-list">GALERIE</a></li>
+            <li><a href="" class="text-white font-bold p-1 inline-block  nav-list">À PROPOS DE NOUS</a></li>
+            <li><a href="" class="text-white font-bold p-1 inline-block  nav-list">PRENDRE UN RENDEZ-VOUS</a></li>
+        </ul>
+       
+    <ion-icon class="md:hidden text-[30px] text-black cursor-pointer" onclick="onToggleMenu(this)" name="menu-outline"></ion-icon>
     </header>
 
     <section class="w-full md:h-[500px] h-[500px] bg-[url(/img/image1.jpg)] bg-cover bg-top bg-no-repeat ">
@@ -313,7 +327,16 @@
             </h5>
         </div>
     </footer>
+    
 
+    <script>
+        const navlisit = document.querySelector('.nav')
+
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu-outline' ? 'close' : 'menu-outline'
+            navlisit.classList.toggle('hidden')
+        }
+    </script>
 
 
     <script>
@@ -332,5 +355,8 @@
     <script src="js/index.js">
 
     </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
